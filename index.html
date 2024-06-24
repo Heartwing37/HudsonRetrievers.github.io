@@ -11,26 +11,26 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            background-color: #808080; /* Grey background */
-            color: #000;
+            height: 100vh;
         }
         header {
             background-color: #000; /* Black background */
             color: #fff; /* White font */
             padding: 20px;
             text-align: center;
+            width: 100%;
+        }
+        main {
+            display: flex;
+            flex: 1;
         }
         nav {
             background-color: #000; /* Black menu background */
-            width: 100px;
-            height: 100vh;
-            position: fixed;
-            top: 70px; /* Adjusted to fit below the header */
-            left: 0;
+            width: 250px;
             padding: 20px;
             display: flex;
             flex-direction: column;
-            z-index: 1000;
+            height: calc(100vh - 70px); /* Adjusted for header height */
         }
         nav ul {
             list-style-type: none;
@@ -60,11 +60,11 @@
             display: block;
         }
         .content {
-            margin-left: 270px; /* Adjusted for sidebar width */
             padding: 20px;
             flex-grow: 1;
             background-color: #808080; /* Grey background */
             color: #000;
+            overflow-y: auto;
         }
         .lab-img {
             max-width: 100%;
@@ -76,8 +76,6 @@
             nav {
                 width: 100%;
                 height: auto;
-                position: relative;
-                top: 0;
             }
             nav ul {
                 flex-direction: column;
@@ -87,9 +85,12 @@
                 top: 0;
                 left: 0;
             }
+            main {
+                flex-direction: column;
+            }
             .content {
-                margin-left: 0;
                 margin-top: 20px;
+                margin-left: 0;
             }
         }
     </style>
@@ -98,30 +99,32 @@
     <header>
         <h1>Hudson Retriever Training</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a>
-                <ul>
-                    <li><a href="team.html">Our Team</a></li>
-                    <li><a href="history.html">Our History</a></li>
-                </ul>
-            </li>
-            <li><a href="training.html">Training Programs</a>
-                <ul>
-                    <li><a href="basic.html">Basic Training</a></li>
-                    <li><a href="advanced.html">Advanced Training</a></li>
-                </ul>
-            </li>
-            <li><a href="locations.html">Where We Train</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="blog.html">The Retriever Blog</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <h2>Welcome to Hudson Retriever Training</h2>
-        <p>This is the homepage. Use the navigation menu to explore more about us and our services.</p>
-        <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/black-labrador-retriever-16-bob-langrish.jpg" alt="Black Labrador Retriever" class="lab-img">
-    </div>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a>
+                    <ul>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="history.html">Our History</a></li>
+                    </ul>
+                </li>
+                <li><a href="training.html">Training Programs</a>
+                    <ul>
+                        <li><a href="basic.html">Basic Training</a></li>
+                        <li><a href="advanced.html">Advanced Training</a></li>
+                    </ul>
+                </li>
+                <li><a href="locations.html">Where We Train</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="blog.html">The Retriever Blog</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h2>Welcome to Hudson Retriever Training</h2>
+            <p>This is the homepage. Use the navigation menu to explore more about us and our services.</p>
+            <img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/black-labrador-retriever-16-bob-langrish.jpg" alt="Black Labrador Retriever" class="lab-img">
+        </div>
+    </main>
 </body>
 </html>
