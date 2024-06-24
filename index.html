@@ -9,32 +9,29 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #808080; /* Grey background */
-            color: #000;
+            display: flex;
         }
         nav {
             background-color: #000; /* Black menu background */
-            width: 100%;
+            width: 250px;
+            height: 100vh;
             position: fixed;
             top: 0;
             left: 0;
             padding: 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
             z-index: 1000;
         }
         nav h1 {
             color: #fff; /* White font */
             font-size: 24px;
-            margin: 0;
+            margin: 0 0 20px 0;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
-            display: flex;
             margin: 0;
-            flex-direction: row;
         }
         nav ul li {
             position: relative;
@@ -49,22 +46,21 @@
         nav ul li ul {
             display: none;
             position: absolute;
-            top: 100%;
-            left: 0;
+            top: 0;
+            left: 100%;
             background-color: #000;
             padding: 0;
             list-style-type: none;
-        }
-        nav ul li ul li {
-            width: 200px;
         }
         nav ul li:hover ul {
             display: block;
         }
         .content {
-            margin-top: 70px; /* To prevent content from being hidden under the fixed nav */
+            margin-left: 270px; /* Adjusted for sidebar width */
             padding: 20px;
             flex-grow: 1;
+            background-color: #808080; /* Grey background */
+            color: #000;
         }
         .lab-img {
             max-width: 100%;
@@ -73,48 +69,7 @@
             margin: 20px 0;
         }
         @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav ul li {
-                margin: 0;
-            }
-            nav ul li ul {
-                position: relative;
-                top: 0;
-                left: 0;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <h1>Hudson Retriever Training</h1>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a>
-                <ul>
-                    <li><a href="team.html">Our Team</a></li>
-                    <li><a href="history.html">Our History</a></li>
-                </ul>
-            </li>
-            <li><a href="training.html">Training Programs</a>
-                <ul>
-                    <li><a href="basic.html">Basic Training</a></li>
-                    <li><a href="advanced.html">Advanced Training</a></li>
-                </ul>
-            </li>
-            <li><a href="locations.html">Where We Train</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="blog.html">The Retriever Blog</a></li>
-        </ul>
-    </nav>
-    <div class="content">
-        <!-- Main content goes here -->
-        <h2>Welcome to Hudson Retriever Training</h2>
-        <p>This is the homepage. Use the navigation menu to explore more about us and our services.</p>
-        <img src="https://example.com/path-to-black-labrador-image.jpg" alt="Black Labrador Retriever" class="lab-img">
-    </div>
-</body>
-</html>
+            nav {
+                width: 100%;
+                height: auto;
+                position: relative
