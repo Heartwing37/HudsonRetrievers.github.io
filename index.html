@@ -10,37 +10,67 @@
             margin: 0;
             padding: 0;
             display: flex;
+            flex-direction: column;
+            background-color: #grey; /* Background color */
+            color: #ecf0f1;
         }
         nav {
-            background-color: #1a252f;
-            width: 250px;
-            height: 100vh;
+            background-color: #000; /* Black menu background */
+            width: 100%;
             position: fixed;
             top: 0;
             left: 0;
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            z-index: 1000;
         }
         nav h1 {
-            color: #ecf0f1;
+            color: #fff; /* White font */
             font-size: 24px;
-            margin-bottom: 20px;
+            margin: 0;
         }
         nav ul {
             list-style-type: none;
             padding: 0;
+            display: flex;
+            margin: 0;
+            flex-direction: row;
         }
         nav ul li {
-            margin: 10px 0;
+            margin: 0 10px;
         }
         nav ul li a {
-            color: #ecf0f1;
+            color: #fff; /* White font */
             text-decoration: none;
             font-size: 18px;
         }
         .content {
-            margin-left: 270px;
+            margin-top: 70px; /* To prevent content from being hidden under the fixed nav */
             padding: 20px;
             flex-grow: 1;
+            background-color: #808080; /* Grey background */
+            color: #000;
+        }
+        .lab-img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .content {
+                margin-top: 120px; /* Increased margin for small screens */
+            }
         }
     </style>
 </head>
@@ -48,6 +78,7 @@
     <nav>
         <h1>Hudson Retriever Training</h1>
         <ul>
+            <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="training.html">Training Programs</a></li>
             <li><a href="locations.html">Where We Train</a></li>
@@ -59,6 +90,7 @@
         <!-- Main content goes here -->
         <h2>Welcome to Hudson Retriever Training</h2>
         <p>This is the homepage. Use the navigation menu to explore more about us and our services.</p>
+        <img src="https://example.com/path-to-black-labrador-image.jpg" alt="Black Labrador Retriever" class="lab-img">
     </div>
 </body>
 </html>
